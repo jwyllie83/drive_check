@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+#
+# drive_check -- check for all zero'd out bytes on a drive
+# Copyright (C) 2017  Jim Wyllie
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __doc__ = """
 Checks for a drive to be nothing but zeroes, as established by dban and most
@@ -39,7 +55,7 @@ with tqdm(total=options.size) as pbar:
 		if options.seek != 0:
 			handle.seek(options.seek)
 
-		# Read in a byte file that works with an iterable...
+		# Read in a byte file that works with an iterable.  Had to hack from the below link.
 		# http://stackoverflow.com/questions/15599639/whats-perfect-counterpart-in-python-for-while-not-eof
 		for test_bytes in iter(partial(handle.read, options.readsize), b''):
 			
