@@ -1,6 +1,6 @@
 # drive_check
 
-`drive_check` is a quick tool I wrote when I couldn't find anything that quite met my needs for verifying that a hard drive had a finishing wipe applied property to it.  Most hard drive tools, like [dban](https://sourceforge.net/projects/dban/), will finish with a zero-byte wipe over the whole drive.  This can verify that, indeed, all of the bytes are zeroed out that are readalbe.
+`drive_check` is a quick tool I wrote when I couldn't find anything that quite met my needs for verifying that a hard drive had a finishing wipe applied property to it.  Most hard drive tools, like [dban](https://sourceforge.net/projects/dban/), will finish with a zero-byte wipe over the whole drive.  This can verify that, indeed, all of the bytes are zeroed out that are readable.
 
 # Warning
 
